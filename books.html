@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended Books - E-Aspirant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">E-Aspirant</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="#test-series">Test Series</a></li>
+                <li><a href="current-affairs.html">Current Affairs</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="#" id="loginBtn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="books-container">
+        <h1>Recommended Books for UPSC</h1>
+        
+        <!-- Donate Books Section -->
+        <section class="donate-section">
+            <h2><i class="fas fa-hand-holding-heart"></i> Donate Books</h2>
+            <div class="donate-content">
+                <div class="donate-info">
+                    <h3>Share Knowledge, Share Success</h3>
+                    <p>Your old UPSC books can help someone achieve their dreams. Donate your books and make a difference in someone's preparation journey.</p>
+                    <ul class="donate-benefits">
+                        <li><i class="fas fa-check"></i> Help fellow aspirants</li>
+                        <li><i class="fas fa-check"></i> Support education</li>
+                        <li><i class="fas fa-check"></i> Make a positive impact</li>
+                    </ul>
+                    <button class="donate-btn" onclick="showDonateForm()">Donate Now</button>
+                </div>
+                <div class="donate-image">
+                    <img src="photos/donate-books.jpg" alt="Donate Books">
+                </div>
+            </div>
+        </section>
+
+        <!-- Book Registration Section -->
+        <section class="register-section">
+            <h2><i class="fas fa-user-plus"></i> Register for Books</h2>
+            <div class="register-content">
+                <div class="register-info">
+                    <h3>Get Access to Free Books</h3>
+                    <p>Register to receive donated books and study materials. We'll match you with available resources based on your needs.</p>
+                    <button class="register-btn" onclick="showRegisterForm()">Register Now</button>
+                </div>
+                <div class="register-image">
+                    <img src="photos/register-books.jpg" alt="Register for Books">
+                </div>
+            </div>
+        </section>
+
+        <!-- Existing Books Sections -->
+        <div class="books-grid">
+            <!-- General Studies -->
+            <div class="subject-section">
+                <h2><i class="fas fa-book"></i> General Studies</h2>
+                <div class="book-list">
+                    <div class="book-item">
+                        <img src="photos/gs1.jpg" alt="Indian Polity">
+                        <h3>Indian Polity</h3>
+                        <p>By M. Laxmikanth</p>
+                        <a href="#" class="book-link">View Details</a>
+                    </div>
+                    <div class="book-item">
+                        <img src="photos/gs2.jpg" alt="Indian Economy">
+                        <h3>Indian Economy</h3>
+                        <p>By Ramesh Singh</p>
+                        <a href="#" class="book-link">View Details</a>
+                    </div>
+                    <div class="book-item">
+                        <img src="photos/gs3.jpg" alt="Geography">
+                        <h3>Geography of India</h3>
+                        <p>By Majid Husain</p>
+                        <a href="#" class="book-link">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- History -->
+            <div class="subject-section">
+                <h2><i class="fas fa-landmark"></i> History</h2>
+                <div class="book-list">
+                    <div class="book-item">
+                        <img src="photos/history1.jpg" alt="Ancient History">
+                        <h3>Ancient History</h3>
+                        <p>By RS Sharma</p>
+                        <a href="#" class="book-link">View Details</a>
+                    </div>
+                    <div class="book-item">
+                        <img src="photos/history2.jpg" alt="Medieval History">
+                        <h3>Medieval History</h3>
+                        <p>By Satish Chandra</p>
+                        <a href="#" class="book-link">View Details</a>
+                    </div>
+                    <div class="book-item">
+                        <img src="photos/history3.jpg" alt="Modern History">
+                        <h3>Modern History</h3>
+                        <p>By Bipin Chandra</p>
+                        <a href="#" class="book-link">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Science -->
+            <div class="subject-section">
+                <h2><i class="fas fa-flask"></i> Science</h2>
+                <div class="book-list">
+                    <div class="book-item">
+                        <img src="photos/sci1.jpg" alt="General Science">
+                        <h3>General Science</h3>
+                        <p>By Lucent Publication</p>
+                        <a href="#" class="book-link">View Details</a>
+                    </div>
+                    <div class="book-item">
+                        <img src="photos/sci2.jpg" alt="Science & Technology">
+                        <h3>Science & Technology</h3>
+                        <p>By Ravi P. Agrahari</p>
+                        <a href="#" class="book-link">View Details</a>
+                    </div>
+                    <div class="book-item">
+                        <img src="photos/sci3.jpg" alt="Environment">
+                        <h3>Environment</h3>
+                        <p>By Shankar IAS</p>
+                        <a href="#" class="book-link">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Donate Books Modal -->
+    <div id="donateModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDonateModal()">&times;</span>
+            <h2>Donate Books</h2>
+            <form class="donate-form">
+                <div class="form-group">
+                    <label for="donorName">Full Name</label>
+                    <input type="text" id="donorName" required>
+                </div>
+                <div class="form-group">
+                    <label for="donorEmail">Email</label>
+                    <input type="email" id="donorEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="donorPhone">Phone Number</label>
+                    <input type="tel" id="donorPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookDetails">Book Details</label>
+                    <textarea id="bookDetails" rows="4" required placeholder="Please list the books you want to donate with their condition"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="pickupAddress">Pickup Address</label>
+                    <textarea id="pickupAddress" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Donation</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register for Books Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRegisterModal()">&times;</span>
+            <h2>Register for Books</h2>
+            <form class="register-form">
+                <div class="form-group">
+                    <label for="recipientName">Full Name</label>
+                    <input type="text" id="recipientName" required>
+                </div>
+                <div class="form-group">
+                    <label for="recipientEmail">Email</label>
+                    <input type="email" id="recipientEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="recipientPhone">Phone Number</label>
+                    <input type="tel" id="recipientPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="preferredSubjects">Preferred Subjects</label>
+                    <select id="preferredSubjects" multiple required>
+                        <option value="gs">General Studies</option>
+                        <option value="history">History</option>
+                        <option value="science">Science</option>
+                        <option value="geography">Geography</option>
+                        <option value="polity">Polity</option>
+                        <option value="economy">Economy</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="deliveryAddress">Delivery Address</label>
+                    <textarea id="deliveryAddress" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Registration</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 E-Aspirant. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function showDonateForm() {
+            document.getElementById('donateModal').style.display = 'block';
+        }
+
+        function closeDonateModal() {
+            document.getElementById('donateModal').style.display = 'none';
+        }
+
+        function showRegisterForm() {
+            document.getElementById('registerModal').style.display = 'block';
+        }
+
+        function closeRegisterModal() {
+            document.getElementById('registerModal').style.display = 'none';
+        }
+
+        // Close modals when clicking outside
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') {
+                event.target.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html> 

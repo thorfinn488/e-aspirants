@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - E-Aspirant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">E-Aspirant</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="#test-series">Test Series</a></li>
+                <li><a href="current-affairs.html">Current Affairs</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="#" id="loginBtn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="payment-container">
+        <div class="payment-wrapper">
+            <h1>Complete Your Payment</h1>
+            
+            <div class="payment-summary">
+                <h2>Order Summary</h2>
+                <div class="order-details">
+                    <div class="order-item">
+                        <span>UPSC Coaching Package</span>
+                        <span>₹299</span>
+                    </div>
+                    <div class="order-item">
+                        <span>Study Materials</span>
+                        <span>₹149</span>
+                    </div>
+                    <div class="order-item">
+                        <span>Mock Tests</span>
+                        <span>₹49</span>
+                    </div>
+                    <div class="order-item total">
+                        <span>Total Amount</span>
+                        <span>₹497</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Payment Method</h3>
+                <div class="payment-methods">
+                    <div class="payment-method">
+                        <input type="radio" name="payment" id="card" checked>
+                        <label for="card">
+                            <i class="fas fa-credit-card"></i>
+                            Credit/Debit Card
+                        </label>
+                    </div>
+                    <div class="payment-method">
+                        <input type="radio" name="payment" id="upi">
+                        <label for="upi">
+                            <i class="fas fa-mobile-alt"></i>
+                            UPI
+                        </label>
+                    </div>
+                    <div class="payment-method">
+                        <input type="radio" name="payment" id="bank">
+                        <label for="bank">
+                            <i class="fas fa-university"></i>
+                            Net Banking
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Card Details</h3>
+                <div class="form-group">
+                    <label>Card Number</label>
+                    <div class="card-input">
+                        <input type="text" placeholder="1234 5678 9012 3456" maxlength="19">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Expiry Date</label>
+                        <input type="text" placeholder="MM/YY" maxlength="5">
+                    </div>
+                    <div class="form-group">
+                        <label>CVV</label>
+                        <input type="text" placeholder="123" maxlength="4">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Card Holder Name</label>
+                    <input type="text" placeholder="Enter card holder name">
+                </div>
+            </div>
+
+            <div class="terms">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I agree to the terms and conditions</label>
+            </div>
+
+            <button class="pay-button">
+                <i class="fas fa-lock"></i>
+                Pay ₹497
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 E-Aspirant. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
