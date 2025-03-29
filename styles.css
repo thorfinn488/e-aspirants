@@ -164,7 +164,7 @@ nav {
 /* Enhanced Slideshow Styles */
 
 .slideshow-container {
-    width: 100%;
+    width: 86%;
     /* Adjust width as needed */
     height: 650px;
     position: relative;
@@ -1058,7 +1058,8 @@ footer {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: fit-content;
+    flex-grow: 1;
 }
 
 .course-content h2 {
@@ -1177,7 +1178,8 @@ footer {
 .book-item img {
     width: 100%;
     height: 300px;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: #f8f8f8;
 }
 
 .book-item h3 {
