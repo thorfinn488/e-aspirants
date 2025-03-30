@@ -1365,10 +1365,13 @@ footer {
 .watch-btn {
     display: inline-block;
     padding: 8px 20px;
+    margin-top: 10px;
     background: #008080;
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
     transition: background 0.3s ease;
 }
 
@@ -1781,4 +1784,55 @@ footer {
     z-index: 0;
     background-color: transparent;
     /* Dark Background */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+textarea {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    margin: 5px auto;
+    padding: 10px;
+    border-radius: 5px;
+    width: 60%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
 }

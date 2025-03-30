@@ -87,23 +87,38 @@ document.getElementById("cart-btn").addEventListener("click", function() {
     window.location.href = "cart.html"; // Redirect to cart page
 });
 
-/* move the particle */
-if (pJS.particles.move.enable) {
-    var ms = pJS.particles.move.speed / 2;
+const stopWords = new Set([
+    "breaking", "new", "update", "exclusive", "just in", "revealed",
+    "reasons", "behind", "launches", "learning", "report", "study",
+    "experts", "says", "claims", "major", "important", "shocking",
+    "amazing", "unbelievable", "must-see", "find out", "truth", "latest"
+]);
 
-    if (i % 3 == 0) {
-        //sphere
-        var point = vec3.fromValues(points[i].x, points[i].y, points[i].z);
+const importantTerms = new Set(["rape", "charge", "judge", "court", "accused", "minor offence", "assault", "abuse"]);
 
-        var localPoint = vec3.create();
-        vec3.transformMat4(localPoint, point, m);
-        var screenPoint = vec3.create();
-        vec3.transformMat4(screenPoint, point, pvm);
+function shortenHeadlines() {
+    const inputText = document.getElementById("headlineInput").value;
+    const headlines = inputText.split("\n").map(h => h.trim()).filter(h => h.length > 0);
 
-        p.x = screenPoint[0] * halfWidth + pJS.canvas.w / 2;
-        p.y = screenPoint[1] * halfHeight + pJS.canvas.h / 2;
-    } else {
-        p.x += p.vx * ms;
-        p.y += p.vy * ms;
+    const results = headlines.map(shortenHeadline);
+
+    const resultList = document.getElementById("result");
+    resultList.innerHTML = results.map(h => `<li>${h}</li>`).join("");
+}
+
+function shortenHeadline(headline) {
+    let words = headline.toLowerCase().split(/\s+/);
+    words = words.filter(word => !stopWords.has(word));
+
+    let preservedWords = words.filter(word => importantTerms.has(word) || word.length > 3);
+
+    if (preservedWords.length === 0) {
+        preservedWords = words; // Ensure at least some content is kept
     }
+
+    return preservedWords.map((w, i) => i === 0 ? capitalize(w) : w).join(" ");
+}
+
+function capitalize(word) {
+    return word.charAt(0).toUpperCase() + word.slice(1);
 }
