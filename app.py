@@ -14,18 +14,40 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_host=1)  # Fix proxy settings
 
+
 stop_words = set(stopwords.words('english')) - {"not", "be", "is", "are", "was", "were"}  # Preserve key negations
 
-# Define redundant words properly
-redundant_words = {"some", "unnecessary", "example"}  # Add actual words here
+# Words to remove only if they do not affect meaning
+redundant_words = {
+    "breaking", "new", "update", "exclusive", "just in", "here's", "revealed", 
+    "reasons", "behind", "launches", "learning", "report", "study", "experts", 
+    "says", "claims", "major", "important", "significant", "shocking", "unexpected",
+    "amazing", "unbelievable", "must-see", "find out", "truth", "latest", "soon",
+    "happened", "live", "announces", "introduces", "releases", "shares", "discusses",
+    "breaking news", "exclusive report", "top stories", "special coverage", "detailed analysis",
+    "everything you need to know", "in-depth", "full story", "revealing", "inside story",
+    "how-to", "revolutionary", "biggest", "most", "fastest", "game-changer", "sensational",
+    "uncovered", "insider", "whopping", "mind-blowing", "earth-shattering", "massive",
+    "heartbreaking", "viral", "trending", "epic", "outrageous", "shocking truth",
+    "incredible", "you won’t believe", "jaw-dropping", "explosive", "eye-opening",
+    "powerful", "groundbreaking", "record-breaking", "controversial", "debate",
+    "must-read", "this will change everything", "history-making", "never seen before",
+    "bizarre", "insane", "spectacular", "phenomenal", "disruptive", "insightful",
+    "blockbuster", "mind-blowing truth", "essential", "key insights", "hot take",
+    "big reveal", "major twist", "unexpected outcome", "mystery solved", "big secret",
+    "insanely", "dramatic", "revealing facts", "all you need to know", "instant reaction",
+    "reaction", "critics say", "analysts predict", "must-watch", "sensational facts",
+    "this just happened", "unmasking", "scandal", "whistleblower", "busted", "shockwave",
+    "secrets revealed", "unveiled", "never-before-seen", "exposed", "jaw-dropping revelation"
+}
 
 def shorten_headline(headline):
     words = nltk.word_tokenize(headline.lower())
-    filtered_words = [word.translate(str.maketrans('', '', string.punctuation)) for word in words]
+    filtered_words = [re.sub(r'[^a-zA-Z0-9\s]', '', word) for word in words]
     filtered_words = [word for word in filtered_words if word and word not in stop_words and word not in redundant_words]
     
     # Preserve key terms related to legal matters
-    important_terms = {"rape", "charge", "judge", "court", "accused", "minor offence", "assault", "abuse"}
+    important_terms = ["rape", "charge", "judge", "court", "accused", "minor offence", "assault", "abuse"]
     preserved_words = [word for word in words if word in important_terms or word in filtered_words]
     
     # Remove duplicate words while maintaining order
