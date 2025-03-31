@@ -32,13 +32,13 @@ redundant_words = {
     "incredible", "you won’t believe", "jaw-dropping", "explosive", "eye-opening",
     "powerful", "groundbreaking", "record-breaking", "controversial", "debate",
     "must-read", "this will change everything", "history-making", "never seen before",
-    "bizarre", "insane", "spectacular", "phenomenal", "disruptive", "insightful",
-    "blockbuster", "mind-blowing truth", "essential", "key insights", "hot take",
-    "big reveal", "major twist", "unexpected outcome", "mystery solved", "big secret",
-    "insanely", "dramatic", "revealing facts", "all you need to know", "instant reaction",
-    "reaction", "critics say", "analysts predict", "must-watch", "sensational facts",
-    "this just happened", "unmasking", "scandal", "whistleblower", "busted", "shockwave",
-    "secrets revealed", "unveiled", "never-before-seen", "exposed", "jaw-dropping revelation"
+    "bizarre", "insane", "spectacular", "phenomenal", "disruptive", "insightful","must","has to",
+    "blockbuster", "mind-blowing truth", "essential", "key insights", "hot take","will","can","could",
+    "big reveal", "major twist", "unexpected outcome", "mystery solved", "big secret","do","did",
+    "insanely", "dramatic", "revealing facts", "all you need to know", "instant reaction","is", "am",
+    "reaction", "critics say", "analysts predict", "must-watch", "sensational facts","are","has","have",
+    "this just happened", "unmasking", "scandal", "whistleblower", "busted", "shockwave","when","whose",
+    "secrets revealed", "unveiled", "never-before-seen", "exposed", "jaw-dropping revelation","where","what","how"
 }
 
 def shorten_headline(headline):

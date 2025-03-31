@@ -89,7 +89,7 @@
 
                 <ul class="nav-links">
                     <li style="color: white"><a href="index.html" style="color: white">Home</a></li>
-                    <li style="color: white"><a href="courses.html" style="color: white">Courses</a></li>
+                    <li style="color: white"><a href="courses.html" style="color: white">Study Material</a></li>
                     <li style="color: white"><a href="current-affairs.html" style="color: white">Current Affairs</a></li>
                     <li style="color: white"><a href="books.html" style="color: white">Books</a></li>
                     <li style="color: white"><a href="contact.html" style="color: white">Contact</a></li>
@@ -117,7 +117,7 @@
         <div id="mobile-menu" class="mobile-menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
+                <li><a href="courses.html">Study Material</a></li>
                 <li><a href="current-affairs.html">Current Affairs</a></li>
                 <li><a href="books.html">Books</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -374,7 +374,7 @@
             nextBtn.addEventListener('click', nextSlide);
 
             // Auto slide functionality
-            let slideInterval = setInterval(nextSlide, 5000);
+            let slideInterval = setInterval(nextSlide, 2500);
 
             // Pause auto slide on hover
             const slideshowContainer = document.querySelector('.slideshow-container');
@@ -383,7 +383,7 @@
             });
 
             slideshowContainer.addEventListener('mouseleave', () => {
-                slideInterval = setInterval(nextSlide, 5000);
+                slideInterval = setInterval(nextSlide, 2500);
             });
 
             // Add keyboard navigation

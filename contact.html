@@ -73,7 +73,7 @@
         }
         
         .nav-links a {
-            color: var(--dark);
+            color: #e0e0e0;
             text-decoration: none;
             transition: color 0.3s ease;
             font-weight: 500;
@@ -110,8 +110,17 @@
             background: none;
             border: none;
             font-size: 1.2rem;
-            color: var(--dark);
+            color: #e0e0e0;
             margin-left: 1rem;
+            cursor: pointer;
+        }
+        
+        #loginBtn {
+            background-color: var(--primary);
+            color: var(--light);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
             cursor: pointer;
         }
         
@@ -186,11 +195,16 @@
             <div class="logo">e-Aspirant</div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
+                <li><a href="courses.html">Study Material</a></li>
                 <li><a href="current-affairs.html">Current Affairs</a></li>
                 <li><a href="books.html">Books</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <div class="nav-actions">
+                <button><i class="fas fa-search"></i></button>
+                <button><i class="fas fa-shopping-cart"></i></button>
+            </div>
+            <button id="loginBtn">Login</button>
         </nav>
     </header>
 
