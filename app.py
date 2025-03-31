@@ -19,8 +19,8 @@ stop_words = set(stopwords.words('english')) - {"not", "be", "is", "are", "was",
 
 # Words to remove only if they do not affect meaning
 redundant_words = {
-    "breaking", "new", "update", "exclusive", "just in", "here's", "revealed", 
-    "reasons", "behind", "launches", "learning", "report", "study", "experts", 
+    "breaking", "new", "update", "exclusive", "just in", "here's", "revealed", "say officials"
+    "reasons", "behind", "launches", "learning", "report", "study", "experts", "say ","officials"
     "says", "claims", "major", "important", "significant", "shocking", "unexpected",
     "amazing", "unbelievable", "must-see", "find out", "truth", "latest", "soon",
     "happened", "live", "announces", "introduces", "releases", "shares", "discusses",
@@ -32,7 +32,7 @@ redundant_words = {
     "incredible", "you won’t believe", "jaw-dropping", "explosive", "eye-opening",
     "powerful", "groundbreaking", "record-breaking", "controversial", "debate",
     "must-read", "this will change everything", "history-making", "never seen before",
-    "bizarre", "insane", "spectacular", "phenomenal", "disruptive", "insightful","must","has to",
+    "bizarre", "insane", "spectacular", "phenomenal", "disruptive", "insightful","must","has"
     "blockbuster", "mind-blowing truth", "essential", "key insights", "hot take","will","can","could",
     "big reveal", "major twist", "unexpected outcome", "mystery solved", "big secret","do","did",
     "insanely", "dramatic", "revealing facts", "all you need to know", "instant reaction","is", "am",
